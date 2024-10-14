@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const connectDB = async() => {
     mongoose
-      .connect("mongodb://localhost:27017/OFICINA")
+      .connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${CLUSTER_ADDRES}`)
       .then(() => console.log("Conectado ao MongoDB"))
       .catch((erro) => console.error("Erro ao conectar ao MongoDB:", erro));
 };
