@@ -20,7 +20,7 @@ const vehicleSchema = new db.Schema({
     },
     maintenaces: {
         type: [mongoose.Schema.Types.ObjectId],
-        required: true
+        required: false
     }
 });
 
